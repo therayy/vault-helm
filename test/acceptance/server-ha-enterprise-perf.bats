@@ -7,8 +7,8 @@ load _helpers
 
   helm install "$(name_prefix)-east" \
     --set='injector.enabled=false' \
-    --set='server.image.repository=hashicorp/vault-enterprise' \
-    --set="server.image.tag=$(yq -r '.server.image.tag' values.yaml)-ent" \
+    --set='server.image.repository=hashicorp/vault-enterprise-fips' \
+    --set="server.image.tag=$(yq -r '.server.image.tag' values.yaml)-ent.fips1402" \
     --set='server.ha.enabled=true' \
     --set='server.ha.raft.enabled=true' \
     --set='server.enterpriseLicense.secretName=vault-license' .
