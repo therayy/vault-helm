@@ -9,7 +9,7 @@ global:
   enabled: true
 
   # The namespace to deploy to. Defaults to the `helm` installation namespace.
-  namespace: ""
+  namespace: "vault"
 
   # Image pull secret to use for registry authentication.
   # Alternatively, the value may be specified as an array of strings.
@@ -25,7 +25,7 @@ global:
   externalVaultAddr: ""
 
   # If deploying to OpenShift
-  openshift: false
+  openshift: true
 
   # Create PodSecurityPolicy for pods
   psp:
@@ -357,7 +357,7 @@ injector:
 server:
   # If true, or "-" with global.enabled true, Vault server will be installed.
   # See vault.mode in _helpers.tpl for implementation details.
-  enabled: "-"
+  enabled: true
 
   # [Enterprise Only] This value refers to a Kubernetes secret that you have
   # created that contains your enterprise license. If you are not using an
@@ -1033,7 +1033,7 @@ ui:
   # serviceType can be used to control the type of service created. For
   # example, setting this to "LoadBalancer" will create an external load
   # balancer (for supported K8S installations) to access the UI.
-  enabled: false
+  enabled: true
   publishNotReadyAddresses: true
   # The service should only contain selectors for active Vault pod
   activeVaultPodOnly: false
