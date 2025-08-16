@@ -1,9 +1,55 @@
 ## Unreleased
 
+## 0.30.1 (July 28, 2025)
+
 Changes:
 
-* Default `vault` version updated to 1.17.3
+* Default `vault` version updated to 1.20.1
+* Default `vault-k8s` version updated to 1.7.0
+* Default `vault-csi-provider` version updated to 1.5.1
+* Tested with Kubernetes versions 1.29-1.33
+
+Bugs:
+
+* server: Allow `server.service.active.annotations` and `server.service.standby.annotation` to override `server.service.annotations` [GH-1121](https://github.com/hashicorp/vault-helm/pull/1121)
+
+## 0.30.0 (March 27, 2025)
+
+Changes:
+
+* Default `vault` version updated to 1.19.0
+* Default `vault-k8s` version updated to 1.6.2
+* Tested with Kubernetes versions 1.28-1.32
+
+Features:
+
+* server: Support setting custom preStop commands [GH-1099](https://github.com/hashicorp/vault-helm/pull/1099)
+
+Improvements:
+
+* server: Add pod labels to server-test.yaml [GH-1094](https://github.com/hashicorp/vault-helm/pull/1094)
+
+Bugs:
+
+* server: Fix invalid yaml in server test when volumeMounts or volumes are empty [GH-855](https://github.com/hashicorp/vault-helm/pull/855)
+* injector: Add RBAC for deleting configmaps [GH-1100](https://github.com/hashicorp/vault-helm/pull/1100)
+
+## 0.29.1 (November 20, 2024)
+
+Bugs:
+* server: restore support for templated config [GH-1073](https://github.com/hashicorp/vault-helm/pull/1073)
+
+## 0.29.0 (November 7, 2024)
+
+KNOWN ISSUES:
+* Template support in server config stopped working [GH-1072](https://github.com/hashicorp/vault-helm/issues/1072)
+
+Changes:
+
+* Default `vault` version updated to 1.18.1
+* Default `vault-k8s` version updated to 1.5.0
 * Default `vault-csi-provider` version updated to 1.5.0
+* Tested with Kubernetes versions 1.27-1.31
 
 Features:
 
